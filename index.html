@@ -1,0 +1,49 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta name="author" content="Satrio Bagus">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="./asset/icon/favicon-birthday-cake.png" />
+    <script src="https://kit.fontawesome.com/a6c3fb960a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/cieultah.css">
+    <script defer src="cieultah.js"></script>
+    <title>Cie Ultah</title>
+</head>
+
+<body>
+    <div class="letter" onclick="openLetter()">
+        <img src="./asset/letter-close4.svg" class="arrow-down-closed">
+        <div class="arrow-down"></div>
+        <img src="./asset/letter-open3.svg" class="arrow-up-open">
+        <div class="arrow-up"></div>
+        <div class="arrow-left"></div>
+        <div class="arrow-right"></div>
+    </div>
+    <audio id="audio" src="./asset/music/selamatulangtahun-song.mp3"></audio>
+
+    <div class="message-box-1" onclick="swap2()">
+        <div class="message-box-greeting">
+            <p>Wah tambah tua nih, HBD yaa Dinda Maulidia!! Semoga yang disemogakan tersemogakan!! Ditunggu traktirannya hehe.. Semangat terus buat apapun itu. 😄<br><br>Sorry cuma bisa ngasih ginian, tapi tulus kok!</p>
+        </div>
+    </div>
+
+    <div class="message-box-2" onclick="swap1()">
+        <div class="message-box-greeting">
+            <p>Gak tahu harus bilang apa lagi, yang penting tetap semangat dan bahagia ya! Gabisa ngasih apa-apa, tapi semoga ini bisa bikin senyum-senyum sendiri hehe 😝</p>
+        </div>
+    </div>
+
+    <div class="media-btn" onclick="mediaBtn()">
+        <div class="media-button" id="media-button">
+            <i class="fas fa-pause"></i>
+        </div>
+    </div>
+
+    <script src="https://cdn.rawgit.com/bungfrangki/efeksalju/2a7805c7/efek-salju.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+/* cieultah.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #0725b7, #6381f3);
+  background-attachment: fixed;
+  font-family: 'Dancing Script', cursive;
+  color: #333;
+}
+
+.letter {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 150%);
+  width: 300px;
+  height: 200px;
+  z-index: -10;
+  background: white;
+  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.1);
+  transition: 1s;
+  cursor: pointer;
+}
+
+.letter .arrow-down-closed,
+.letter .arrow-up-open {
+  width: 300px;
+  height: 125px;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.letter .arrow-up-open {
+  margin-top: -125px;
+  z-index: 9;
+  visibility: hidden;
+}
+
+.letter .arrow-down-closed {
+  z-index: 5;
+}
+
+.letter .arrow-down,
+.letter .arrow-up,
+.letter .arrow-left,
+.letter .arrow-right {
+  position: absolute;
+  z-index: 3;
+}
+
+.letter .arrow-down {
+  border-right: 150px solid transparent;
+  border-top: 100px solid #f0f0f0;
+  border-left: 150px solid transparent;
+}
+
+.letter .arrow-up {
+  bottom: 0;
+  border-right: 150px solid transparent;
+  border-bottom: 110px solid #fafafa;
+  border-left: 150px solid transparent;
+  z-index: 4;
+}
+
+.letter .arrow-left {
+  right: 0;
+  border-right: 150px solid whitesmoke;
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+}
+
+.letter .arrow-right {
+  left: 0;
+  border-left: 150px solid whitesmoke;
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+}
+
+.message-box-1,
+.message-box-2 {
+  width: 250px;
+  height: auto;
+  background-color: white;
+  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.08);
+  margin-top: 150px;
+  position: absolute;
+  visibility: hidden;
+  text-align: center;
+  padding: 25px 20px;
+  border-radius: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.message-box-1 {
+  animation: letter1-out 4s ease 750ms forwards;
+  -webkit-animation-play-state: paused;
+}
+
+@keyframes letter1-out {
+  0% {
+    visibility: hidden;
+    transform: translate(-50%, 0);
+  }
+  44% {
+    visibility: visible;
+    transform: translate(-50%, -125px);
+  }
+  100% {
+    visibility: visible;
+    transform: translate(-50%, 50px);
+  }
+}
+
+.message-box-greeting {
+  font-size: 20px;
+  line-height: 1.6;
+  word-spacing: 2px;
+}
+
+.media-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 25px;
+  visibility: hidden;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
